@@ -12,8 +12,13 @@
 .project
 .settings
 
+# IntelliJ IDEA setting files #
+.idea
+*.iml
+
 # mvn target #
 target
 
 # Mac OS X meta file
 .DS_Store
+
