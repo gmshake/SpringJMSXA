@@ -7,6 +7,7 @@
       <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
       <jta-data-source>testDS</jta-data-source>
       <class>tk.blizz.jms.model.SmsMessage</class>
+      <class>tk.blizz.jms.model.SmsMessageHistory</class>
       <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
       <validation-mode>NONE</validation-mode>
       <properties>
