@@ -18,6 +18,12 @@ public class SmsManagerImpl implements SmsManager {
 
 	@Override
 	@Transactional(value=TxType.REQUIRED)
+	public SmsMessage getSmsMessageById(Long id) {
+		return smsMessageDao.getSmsMessageById(id);
+	}
+
+	@Override
+	@Transactional(value=TxType.REQUIRED)
 	public void sendSmsMessageAndSave(String content) {
 		smsMessageHandler.sendSmsMessage(content);
 
@@ -26,5 +32,4 @@ public class SmsManagerImpl implements SmsManager {
 
 		smsMessageDao.saveSmsMessage(smsMessage);
 	}
-
 }

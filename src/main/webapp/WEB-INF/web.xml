@@ -5,7 +5,7 @@
 	      version="2.5">	
  
 	<display-name>Spring JMS Web Application</display-name>
- 
+
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
@@ -14,7 +14,17 @@
 			/WEB-INF/classes/jmsContext.xml
 		</param-value>
 	</context-param>
- 
+
+	<servlet>
+		<servlet-name>SmsMessageServlet</servlet-name>
+		<servlet-class>tk.blizz.jms.web.servlet.SmsMessageServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SmsMessageServlet</servlet-name>
+		<url-pattern>/SmsMessage.do</url-pattern>
+	</servlet-mapping>
+
 	<listener>
 		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
 	</listener>
